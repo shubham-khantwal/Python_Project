@@ -1,12 +1,12 @@
 
 # CALCULATOR
 
-# import tkinter as tk
-#
-# mainWindow = tk.Tk()
- mainWindow.title('CALCULATOR')
+ import tkinter as tk
 
- label1= tk.Label(mainWindow,text = 'ENTER FIRST NUMBER',pady=10 ,padx=10)
+ mainWindow = tk.Tk()                        # defining a window
+ mainWindow.title('CALCULATOR')              # setting the title of the window
+
+ label1= tk.Label(mainWindow,text = 'ENTER FIRST NUMBER',pady=10 ,padx=10)          
  label1.pack()
  text1= tk.Entry(mainWindow)
  text1.pack()
@@ -15,22 +15,22 @@
  label2.pack()
  text2= tk.Entry(mainWindow)
  text2.pack()
- def sumIt():
+ def sumIt():                                                     # defining summation
      first= int(text1.get())
      second= int(text2.get())
      result.config(text='result : '+str(first+second))
 
- def subIt():
+ def subIt():                                                     # defining subtraction
      first = int(text1.get())
      second= int(text2.get())
      result.config(text='result : '+str(first-second))
 
- def mulIt():
+ def mulIt():                                                     # defining multiplication
      first = int(text1.get())
      second = int(text2.get())
      result.config(text=first*second)
 
- def divIt():
+ def divIt():                                                     # defining division
      first = int(text1.get())
      second = int(text2.get())
      result.config(text = 'result :'+ str(first/second))
@@ -47,5 +47,5 @@
 
  result =tk.Label(mainWindow)
  result.pack()
-#
-# mainWindow.mainloop()
+
+ mainWindow.mainloop()
